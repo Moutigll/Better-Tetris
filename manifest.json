@@ -1,0 +1,29 @@
+{
+    "name": "Better Tetris",
+    "manifest_version": 3,
+    "version": "1.3",
+    "description": "Make a better version of the tetris game on tetris.com",
+    "permissions": ["tabs", "scripting"],
+    "host_permissions": ["https://*.tetris.com/*"],
+    "content_scripts": [
+        {
+            "matches": ["https://tetris.com/*"],
+            "js": ["Script.js"]
+        }
+    ],
+    "action": {
+        "default_popup" : "popup.html",
+        "default_icon": {
+            "64": "assets/logo-action.png"
+        }
+    },
+    "icons": {
+        "64": "assets/logo-action.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "lmoutig@yahoo.com"
+        }
+      }
+      
+}
